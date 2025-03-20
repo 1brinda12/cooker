@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cookie Installer</title>
+</head>
+<body>
+    <h1>Injecting Cookie...</h1>
+    <script>
+        // Inject a test cookie
+        document.cookie = "x=testsplash_cookie_value; Path=/; Secure;";
+
+        // Redirect after setting the cookie
+        setTimeout(() => {
+            window.location.href = "https://google.com";
+        }, 3000);
+    </script>
+</body>
+</html>

